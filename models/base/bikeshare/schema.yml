@@ -1,0 +1,59 @@
+
+version: 2
+
+models:
+  - name: stations # The name of the sql file
+    description: "Base model for station-level data from the 'bikeshare_stations' source."
+    columns:
+      - name: station_id
+        description: "Unique numeric identifier for the station."
+        tests:
+          - not_null
+          - unique
+
+      - name: station_name
+        description: "Official name of the bikeshare station."
+
+      - name: station_status
+        description: "Operational status of the station (e.g., 'active', 'closed')."
+        tests:
+          - accepted_values:
+              values:
+                - active
+                - closed
+
+      - name: station_coordinates
+        description: "Geographic coordinates (latitude/longitude) or address geolocation string."
+
+      - name: station_street_address
+        description: "Physical street address or nearest street location of the station."
+
+      - name: station_aliias
+        description: "Alternate name or nickname for the station."
+
+      - name: city_asset_number
+        description: "Unique city asset number assigned to the station."
+
+      - name: station_type
+        description: "Property type or classification of the station (e.g., parkland, sidewalk)."
+
+      - name: dock_count
+        description: "Number of docking points or bike slots available at the station."
+
+      - name: station_power_type
+        description: "Type of power supply for the station (e.g., non-metered, solar)."
+
+      - name: station_length
+        description: "The footprint length of the station in feet (or relevant unit)."
+
+      - name: station_width
+        description: "The footprint width of the station in feet (or relevant unit)."
+
+      - name: station_notes
+        description: "Additional notes or remarks regarding the station."
+
+      - name: city_council_district
+        description: "Council district number in which the station is located."
+
+      - name: last_modified_date
+        description: "Timestamp indicating when the station record was last updated."

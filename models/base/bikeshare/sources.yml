@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: austin_bikeshare        # Logical name for the source
+    schema: austin_bikeshare
+    tables:
+      - name: bikeshare_stations
+        description: "Bike station details including location and capacity."
+      - name: bikeshare_trips
+        description: "Trips taken, including start and end data."
