@@ -16,7 +16,7 @@ WITH final AS (
         bike_type               AS bike_type,
         start_time              AS trip_started_at,
         start_station_id        AS start_station_id,
-        start_station_name      AS start_station_name
+        start_station_name      AS start_station_name,
         end_station_id          AS end_station_id,
         end_station_name        AS end_station_name,
         duration_minutes        AS duration_minutes
