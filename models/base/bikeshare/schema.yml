@@ -57,3 +57,46 @@ models:
 
       - name: last_modified_date
         description: "Timestamp indicating when the station record was last updated."
+
+  - name: bikeshare_trips
+    description: "Table containing bikeshare trip data, including trip details, station information, and duration."
+    columns:
+      - name: trip_id
+        description: "Unique identifier for each trip."
+        data_type: integer
+
+      - name: subscriber_type
+        description: "Type of subscriber (e.g., 'Student Membership', 'Explorer')."
+        data_type: string
+
+      - name: bike_id
+        description: "Unique identifier for the bike used during the trip."
+        data_type: string
+
+      - name: bike_type
+        description: "Type of bike (e.g., 'Classic', 'Electric')."
+        data_type: string
+
+      - name: trip_started_at
+        description: "Timestamp indicating when the trip started."
+        data_type: timestamp
+
+      - name: start_station_id
+        description: "Unique identifier for the start station."
+        data_type: string
+
+      - name: start_station_name
+        description: "Name of the station where the trip started."
+        data_type: string
+
+      - name: end_station_id
+        description: "Unique identifier for the end station."
+        data_type: string
+
+      - name: end_station_name
+        description: "Name of the station where the trip ended."
+        data_type: string
+
+      - name: duration_minutes
+        description: "Duration of the trip in minutes."
+        data_type: float
